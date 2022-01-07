@@ -1,7 +1,7 @@
 let cliente ={
 mesa:'',
 hora:'',
-pedido:''
+pedido:[]
     
 }
 
@@ -35,12 +35,23 @@ function GuardarCliente(){
             alerta.remove();
 
             },3000);
-        
-
 }
 return;
 
     }
-
-    console.log('todos los campos estan llenos ')
+//datosCliente
+   cliente ={...cliente,mesa,hora};
+//    console.log(cliente);
+   //ocultarModal
+   const modalFormulario =document.querySelector('#formulario');
+   const modalBooststrap = bootstrap.Modal.getInstance(modalFormulario);
+   modalBooststrap.hide();
+   //mostraSecciones
+mostrarSecciones();
+ 
 }
+function mostrarSecciones(){
+    const seccionesOcultas = document.querySelectorAll('.d-none');
+    seccionesOcultas.forEach(seccion => seccion.classList.remove('d-none'));
+    
+       }
