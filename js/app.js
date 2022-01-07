@@ -51,6 +51,7 @@ mostrarSecciones();
  
 }
 function mostrarSecciones(){
+    //oculatando el modal y cargando las secciones
     const seccionesOcultas = document.querySelectorAll('.d-none');
     seccionesOcultas.forEach(seccion => seccion.classList.remove('d-none'));
     
